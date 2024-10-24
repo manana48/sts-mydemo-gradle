@@ -1,4 +1,6 @@
 #!/bin/bash
+cat /dev/null > /home/ec2-user/deploy.log
+
 BUILD_JAR=$(ls /home/ec2-user/mydemo-deploy/build/libs/sbb-0.0.1-SNAPSHOT.jar)
 JAR_NAME=$(basename $BUILD_JAR)
 echo "> build : $JAR_NAME" >> /home/ec2-user/deploy.log
