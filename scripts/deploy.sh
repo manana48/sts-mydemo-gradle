@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Send messages using incoming webhooks
-curl -X POST --data-urlencode "payload={\"channel\": \"me_roypark22_hook\", \"username\": \"webhookbot\", \"text\": \"배포 시작 하였습니다.\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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
+curl -X POST --data-urlencode "payload={\"channel\": \"me_roypark22_hook\", \"username\": \"webhookbot\", \"text\": \"배포 시작 하였습니다.\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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
 
 ## Initialize log file
 cat /dev/null > /home/ec2-user/deploy.log
