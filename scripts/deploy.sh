@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ## Send messages using incoming webhooks
-WEBHOOK_URL="https://hooks.slack.com/services/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"
-curl -X POST --data-urlencode "payload={\"channel\": \"#my-channel-here\", \"username\": \"webhookbot\", \"text\": \"이 항목은 #개의 my-channel-here에 포스트되며 webhookbot이라는 봇에서 제공됩니다.\", \"icon_emoji\": \":ghost:\"}" $WEBHOOK_URL
+WEBHOOK_URL="https://hooks.slack.com/services/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"
+curl -X POST --data-urlencode "payload={\"channel\": \"#me_roypark22_new\", \"username\": \"mydemo-webhook\", \"text\": \"이 항목은 #개의 my-channel-here에 포스트되며 webhookbot이라는 봇에서 제공됩니다.\", \"icon_emoji\": \":ghost:\"}" $WEBHOOK_URL
 
 ## Initialize log file
 cat /dev/null > /home/ec2-user/deploy.log
