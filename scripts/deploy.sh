@@ -1,6 +1,12 @@
 #!/bin/bash
+
+## Send messages using incoming webhooks
+curl -X POST --data-urlencode "payload={\"channel\": \"me_roypark22_hook\", \"username\": \"webhookbot\", \"text\": \"배포 시작 하였습니다.\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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
+
+## Initialize log file
 cat /dev/null > /home/ec2-user/deploy.log
 
+## Deploy Java Service
 BUILD_JAR=$(ls /home/ec2-user/mydemo-deploy/build/libs/sbb-0.0.1-SNAPSHOT.jar)
 JAR_NAME=$(basename $BUILD_JAR)
 echo "> build : $JAR_NAME" >> /home/ec2-user/deploy.log
