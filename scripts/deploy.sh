@@ -20,8 +20,8 @@ if [ -z $CURRENT_PID ]
 then
   echo "> 실행중인 애플리케이션이 없으므로 종료하지 않음" >> /home/ec2-user/deploy.log
 else
-  echo "> kill -9 $CURRENT_PID" >> /home/ec2-user/deploy.log
-  kill -9 $CURRENT_PID 2>>/home/ec2-user/deploy_err.log
+  echo "> sudo kill -9 $CURRENT_PID" >> /home/ec2-user/deploy.log
+  sudo kill -9 $CURRENT_PID 2>>/home/ec2-user/deploy_err.log
   sleep 10;
 fi
 
